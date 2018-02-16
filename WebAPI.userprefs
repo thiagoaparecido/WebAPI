@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{5CB6F0F6-60FB-4A30-BC22-696D47D8CD8B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
       <File FileName="Controllers/FooController.cs" Line="1" Column="1" />
       <File FileName="Controllers/BaseController.cs" Line="33" Column="24" />
       <File FileName="Models/WebAPIContext.cs" Line="13" Column="2" />
-      <File FileName="Startup.cs" Line="31" Column="1" />
+      <File FileName="Startup.cs" Line="35" Column="9" />
+      <File FileName="Models/WebAPIInitializer.cs" Line="9" Column="104" />
+      <File FileName="Program.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

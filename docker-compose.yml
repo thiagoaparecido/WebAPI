@@ -1,42 +1,36 @@
-version: '2'
+version: "3"
 services:
-  api1:
-    build:
-      context: .
-      dockerfile: webapi.dockerfile
-    depends_on:
-      - postgres
-    container_name: web-api-1
-    ports:
-      - "5008:5000"
-    links:
-      - postgres:pg-host
-    networks:
-      - webapi-network
-  nginx:
-    build:
-      context: .
-      dockerfile: nginx.dockerfile
-    container_name: webapi-nginx
-    ports:
-      - "5010:80"
-    links:
-      - api1
-    networks:
-      - webapi-network
-  postgres:
-    image: postgres
-    container_name: webapi-postgres
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_DB: WebAPIDatabase
-      POSTGRES_USER: docker
-      POSTGRES_PASSWORD: docker
-    restart: always
-    networks:
-      - webapi-network
-
+    web:
+        build:
+            context: .
+            dockerfile: webapi.dockerfile
+        ports:
+            - "8000:5000"
+        depends_on:
+            - db
+        container_name: webapi-server
+        networks:
+            - webapi-network
+    db:
+        image: "microsoft/mssql-server-linux"
+        container_name: webapi-database
+        environment:
+            SA_PASSWORD: "p@ssw0rd"
+            ACCEPT_EULA: "Y"
+        restart: always
+        networks:
+            - webapi-network
+    nginx:
+        build:
+            context: .
+            dockerfile: nginx.dockerfile
+        container_name: webapi-nginx
+        ports:
+            - "5010:80"
+        links:
+            - web
+        networks:
+            - webapi-network
 networks:
-  webapi-network:
-    driver: bridge
+    webapi-network:
+        driver: bridge

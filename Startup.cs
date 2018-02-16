@@ -27,14 +27,15 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<WebAPIContext>(options => options.UseInMemoryDatabase("WebAPIDatabase"));
+            // services.AddDbContext<WebAPIContext>(options => options.UseInMemoryDatabase("WebAPIDatabase"));
+            services.AddDbContext<WebAPIContext>(
+                options => options.UseSqlServer(Configuration["Database:ConnectionString"]));
             services.AddScoped<IFooRepository, FooRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            Console.WriteLine(Configuration["MyConfig"]);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

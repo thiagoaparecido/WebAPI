@@ -1,11 +1,12 @@
-FROM microsoft/dotnet:latest
-COPY . /WebAPI
-WORKDIR /WebAPI
- 
+FROM microsoft/aspnetcore-build
+COPY . /app
+WORKDIR /app
+
 RUN ["dotnet", "restore"]
 RUN ["dotnet", "build"]
- 
+
 EXPOSE 5000/tcp
 ENV ASPNETCORE_URLS http://*:5000
- 
-ENTRYPOINT ["dotnet", "run"]
+
+RUN chmod +x ./entrypoint.sh
+CMD /bin/bash ./entrypoint.sh
