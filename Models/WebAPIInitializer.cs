@@ -1,5 +1,3 @@
-using WebAPI.Models;
-using System;
 using System.Linq;
 
 namespace WebAPI.Models

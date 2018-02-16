@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Models;
 
 namespace WebAPI.Repositories
 {
-	public class GenericRepository<T> where T : class
+    public class GenericRepository<T> where T : class
 	{
 		private WebAPIContext context;
 

@@ -1,11 +1,10 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using WebAPI.Models;
 using WebAPI.Repositories;
 
 namespace WebAPI.Controllers
 {
-	[Route("api/foo")]
+    [Route("api/foo")]
 	public class FooController : BaseGenericController<Foo>
 	{
 		public FooController(IFooRepository repository) : base(repository) { }

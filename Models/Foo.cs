@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace WebAPI.Models
+﻿namespace WebAPI.Models
 {
     public class Foo
     {

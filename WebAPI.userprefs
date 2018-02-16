@@ -1,12 +1,18 @@
 ﻿<Properties StartupConfiguration="{5CB6F0F6-60FB-4A30-BC22-696D47D8CD8B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Repositories/IRepository.cs">
     <Files>
-      <File FileName="Controllers/FooController.cs" Line="1" Column="1" />
-      <File FileName="Controllers/BaseController.cs" Line="33" Column="24" />
-      <File FileName="Models/WebAPIContext.cs" Line="13" Column="2" />
-      <File FileName="Startup.cs" Line="35" Column="9" />
-      <File FileName="Models/WebAPIInitializer.cs" Line="9" Column="104" />
-      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="Controllers/FooController.cs" Line="1" Column="32" />
+      <File FileName="Controllers/BaseController.cs" Line="1" Column="32" />
+      <File FileName="Models/WebAPIContext.cs" Line="1" Column="37" />
+      <File FileName="Startup.cs" Line="3" Column="29" />
+      <File FileName="Models/WebAPIInitializer.cs" Line="2" Column="1" />
+      <File FileName="Program.cs" Line="4" Column="46" />
+      <File FileName="Controllers/ValuesController.cs" Line="2" Column="1" />
+      <File FileName="Models/Foo.cs" Line="1" Column="1" />
+      <File FileName="Repositories/FooRepository.cs" Line="1" Column="21" />
+      <File FileName="Repositories/GenericRepository.cs" Line="1" Column="34" />
+      <File FileName="Repositories/IFooRepository.cs" Line="1" Column="21" />
+      <File FileName="Repositories/IRepository.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -1,5 +1,4 @@
-﻿using System;
-using WebAPI.Models;
+﻿using WebAPI.Models;
 
 namespace WebAPI.Repositories
 {

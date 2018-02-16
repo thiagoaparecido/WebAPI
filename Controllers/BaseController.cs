@@ -1,10 +1,9 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using WebAPI.Repositories;
 
 namespace WebAPI.Controllers
 {
-public abstract class BaseGenericController<T> : Controller
+    public abstract class BaseGenericController<T> : Controller
 	{
 		protected IRepository<T> repository;
 
