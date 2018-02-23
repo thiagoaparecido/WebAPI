@@ -1,4 +1,7 @@
 FROM microsoft/aspnetcore-build
+
+LABEL maintainer="fawad@outlook.com"
+
 COPY . /app
 WORKDIR /app
 
