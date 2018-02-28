@@ -18,6 +18,8 @@ namespace WebAPI.Controllers
 		[HttpGet]
 		public IActionResult FindAll()
 		{
+			_logger.LogInformation("Hello, World");
+
 			var result = repository.FindAll();
 			return Ok(result);
 		}
